@@ -2,34 +2,34 @@
 
 {% block main %}
 
-{#<section class="section">#}
-    {#<div class="container">#}
-        {#<div class="columns">#}
-            {#<div class="column is-two-thirds">#}
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-two-thirds">
 
-                {# Remove this include if you don't need it anymore. #}
+                 {#Remove this include if you don't need it anymore.#}
                 {#{{ include('partials/_fresh_install.twig') }}#}
 
-                {#{% setcontent homepage = "homepage" limit 1 returnsingle %}#}
-                {#{% if homepage %}#}
-                {#<div class="content">#}
-                    {#<h2 class="title is-size-1 is-size-3-mobile">{{ homepage.title }}</h2>#}
-                    {#<div class="teaser">{{ homepage.teaser }}</div>#}
-                    {#{{ homepage.content }}#}
+                {% setcontent homepage = "homepage" limit 1 returnsingle %}
+                {% if homepage %}
+                <div class="content">
+                    <h2 class="title is-size-1 is-size-3-mobile">{{ homepage.title }}</h2>
+                    <div class="teaser">{{ homepage.teaser }}</div>
+                    {{ homepage.content }}
 
-                    {#{% include 'partials/_record_meta.twig' with {'record': homepage } %}#}
-                {#</div>#}
-                {#{% else %}#}
-                    {# Remove this include if you don't need it anymore. #}
+                    {% include 'partials/_record_meta.twig' with {'record': homepage } %}
+                </div>
+                {% else %}
+                     {#Remove this include if you don't need it anymore.#}
                     {#{{ include('partials/_no_content.twig') }}#}
-                {#{% endif %}#}
-            {#</div>#}
-            {#<div class="column">#}
-                {#{{ include('partials/_aside.twig') }}#}
-            {#</div>#}
-        {#</div>#}
-    {#</div>#}
-{#</section>#}
+                {% endif %}
+            </div>
+            <div class="column">
+                {{ include('partials/_aside.twig') }}
+            </div>
+        </div>
+    </div>
+</section>
 
 {# Pages section #}
 
