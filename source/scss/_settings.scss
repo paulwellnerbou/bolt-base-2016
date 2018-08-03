@@ -15,15 +15,16 @@ $dark: #444;
 $medium: #777;
 
 // Fonts
-$font-sans-serif    : 'Roboto', sans-serif;     // Base font
-$font-serif         : 'Bitter', serif;          // Headings
+$font-sans-serif    : "Helvetica Neue", Arial, Helvetica, sans-serif;     // Base font
+$font-serif         : "Helvetica Neue", Arial, Helvetica, sans-serif;     // Headings
 
 // 3. Set the derived variables
 
 // Option 1: https://color.adobe.com/ims-construction-colors-color-theme-10555392/
 $link: #DF1C31;
 $info: #1B2A3F;
-$primary: #2873A4;
+// $primary: #2873A4;
+$primary: #88b91c; // esm green
 $success: #F1A42C;
 
 // Option 2: https://color.adobe.com/mapa-laranja-color-theme-10556928/
