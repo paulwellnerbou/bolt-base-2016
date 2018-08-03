@@ -9,7 +9,7 @@
                 <article role="article" class="content">
                     <h1 class="title is-size-1 is-size-3-mobile">{{ record.title }}</h1>
 
-                    {% include 'partials/_record_meta.twig' with {'extended': true} %}
+                    {#{% include 'partials/_record_meta.twig' with {'extended': true} %}#}
 
                     {{ record.teaser }}
 
@@ -35,7 +35,7 @@
                     {{ dump(record) }}
                     #}
 
-                    {{ include('partials/_recordfooter.twig', { 'record': record, 'extended': true }) }}
+                    {#{{ include('partials/_recordfooter.twig', { 'record': record, 'extended': true }) }}#}
                 </div>
             </article>
             <div class="column">
