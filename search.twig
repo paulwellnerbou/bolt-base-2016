@@ -50,11 +50,11 @@
                         {% if record.editlink() %}
                             <span class="edit-link"><a href="{{ record.editlink() }}"><strong>Edit</strong></a></span> &bullet;
                         {% endif %}
-                        <a href="{{ record.link() }}">{{ __('general.phrase.permalink') }}</a> &bullet;
-                        {{ __('general.phrase.written-by-on', {
-                            '%name%': record.user.displayname|default(__('Unknown')),
-                            '%date%': record.datepublish|localedatetime("%A %B %e, %Y")
-                        }) }}
+                        <a href="{{ record.link() }}">{{ __('general.phrase.permalink') }}</a>
+                        {#{{ __('general.phrase.written-by-on', {#}
+                            {#'%name%': record.user.displayname|default(__('Unknown')),#}
+                            {#'%date%': record.datepublish|localedatetime("%A %B %e, %Y")#}
+                        {#}) }}#}
                     </p>
 
                     {# display something introduction-like.. #}
