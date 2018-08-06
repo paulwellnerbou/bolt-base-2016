@@ -3,7 +3,7 @@
     <div class="container">
         <div class="navbar-brand">
             <span class="navbar-item" href="/">
-                {{ config.get('general/sitename') }}
+                {{ config.get('general/sitename') | raw }}
             </span>
             <span class="navbar-burger" data-target="navbar-toggle">
                 <span></span>
