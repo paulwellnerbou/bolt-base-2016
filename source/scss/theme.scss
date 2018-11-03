@@ -28,6 +28,17 @@
         font-size: $size-large;
         font-weight: bold;
     }
+    .navbar-item:first-child {
+        background-image: url('/files/layout/esm-logo.png');
+        background-repeat: no-repeat;
+        font-size: .1pt;
+        width: 120px;
+        color: rgba(0, 0, 0, 0) !important;
+        border-width: 0;
+        background-size: auto 2rem;
+        background-position-x: center;
+        background-position-y: center;
+    }
 }
 
 .navbar-end {
