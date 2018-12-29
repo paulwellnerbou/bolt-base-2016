@@ -22,6 +22,14 @@
     z-index: 1;
 }
 
+.content {
+    h1, h2 {
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid gray;
+        font-weight: normal;
+    }
+}
+
 .navbar-brand {
     .navbar-item {
         font-family: $font-serif;
@@ -32,12 +40,31 @@
         background-image: url('/files/layout/esm-logo.png');
         background-repeat: no-repeat;
         font-size: .1pt;
-        width: 120px;
+        width: 160px;
         color: rgba(0, 0, 0, 0) !important;
         border-width: 0;
-        background-size: auto 2rem;
+        background-size: auto 4rem;
         background-position-x: center;
         background-position-y: center;
+    }
+}
+
+@media screen and (min-width: 1088px) {
+    .navbar {
+        min-height: 5.25rem;
+    }
+    .navbar-brand > .navbar-item:first-child {
+        font-size: .1pt;
+        width: 160px;
+        background-size: auto 4rem;
+    }
+    .section .container {
+        top: -10rem;
+        background-color: #fff;
+        padding: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        box-shadow: #333 0px 0px 30px;
     }
 }
 

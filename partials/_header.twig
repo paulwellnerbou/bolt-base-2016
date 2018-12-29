@@ -1,10 +1,14 @@
 {% if record.contenttype.slug|default() not in ['showcases', 'entries'] %}
 {% setcontent homepage = "homepage" limit 1 returnsingle %}
-<section class="hero hero-image is-primary is-bold is-medium {% if app.request.get('_route') == "homepage" %}is-large{% endif %}"
-    {%- if homepage.image|default %}
-        {#data-background-image="{{ asset(homepage.image, 'files') }}"#}
-        style="background-position: top; background-image: url({{ asset(homepage.image, 'files') }})"
-    {% endif -%}
+<section class="hero hero-image is-primary is-bold is-medium {% if app.request.get('_route') != "not-large" %}is-large{% endif %}"
+        {% if record.image is not empty %}
+            style="background-position-y: center; background-image: url({{ asset(record.image, 'files') }})"
+        {% else %}
+            {%- if homepage.image|default %}
+                {#data-background-image="{{ asset(homepage.image, 'files') }}"#}
+                style="background-position-y: center; background-image: url({{ asset(homepage.image, 'files') }})"
+            {% endif -%}
+        {% endif %}
     >
     <div class="hero-body">
         <div class="container has-text-centered">
